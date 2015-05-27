@@ -45,7 +45,7 @@ namespace Homework_FunctionalProgramming
 
             PrintStudents(studentsbyGropup.ToList());
 
-            // Problem 3 Studets by First and Las Name:
+            // Problem 3 Studets by First and Last Name:
 
             var studentsByFirstNameAndLastName =
                 from student in students
@@ -94,8 +94,8 @@ namespace Homework_FunctionalProgramming
 
             var sortedStudentsLINQ =
                 from student in students
-                orderby student.FirstName descending
                 orderby student.LastName descending
+                orderby student.FirstName descending
                 select student;
 
             Console.WriteLine("Students sorted with LINQ expressions: ");
